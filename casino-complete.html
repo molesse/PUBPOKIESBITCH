@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUB♧POKIES - Premium Online Casino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Tommy Hilfiger Inspired Color Palette */
+    --primary-beige: #F4F1E8;          /* Full beige - main background */
+    --tanned-brown: #C49080;           /* Tanned light brown */
+    --dark-brown: #5D4037;             /* Dark brown */
+    --accent-gold: #D4AF37;            /* Casino gold accents */
+    --deep-red: #8B0000;               /* Casino red */
+    --cream-white: #FFFEF7;            /* Cream white */
+    --shadow-brown: rgba(93, 64, 55, 0.2);
+    --gradient-primary: linear-gradient(135deg, var(--tanned-brown), var(--dark-brown));
+    --gradient-accent: linear-gradient(135deg, var(--accent-gold), #B8860B);
+    
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+    
+    /* Shadows */
+    --shadow-light: 0 2px 8px rgba(93, 64, 55, 0.1);
+    --shadow-medium: 0 4px 16px rgba(93, 64, 55, 0.15);
+    --shadow-heavy: 0 8px 32px rgba(93, 64, 55, 0.2);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-medium: 0.4s ease-in-out;
+    --transition-slow: 0.6s ease-in-out;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--primary-beige);
+    color: var(--dark-brown);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, var(--cream-white) 0%, var(--primary-beige) 100%);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow-medium);
+    border-bottom: 2px solid var(--tanned-brown);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--dark-brown);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: -0.02em;
+}
+
+.club-symbol {
+    color: var(--accent-gold);
+    font-size: 2.4rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+    to { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.6); }
+}
+
+.slogan {
+    font-size: 0.9rem;
+    color: var(--tanned-brown);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-top: -0.2rem;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-accent);
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+    color: var(--accent-gold);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--cream-white);
+    box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--dark-brown);
+    border: 2px solid var(--tanned-brown);
+}
+
+.btn-secondary:hover {
+    background: var(--tanned-brown);
+    color: var(--cream-white);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-beige) 0%, var(--cream-white) 50%, var(--primary-beige) 100%);
+    padding: 120px 0 80px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(196, 144, 128, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--tanned-brown);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.btn-hero-primary, .btn-hero-secondary {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: var(--transition-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hero-primary {
+    background: var(--gradient-primary);
+    color: var(--cream-white);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-hero-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: var(--transition-medium);
+}
+
+.btn-hero-primary:hover::before {
+    left: 100%;
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.btn-hero-secondary {
+    background: transparent;
+    color: var(--dark-brown);
+    border: 3px solid var(--tanned-brown);
+}
+
+.btn-hero-secondary:hover {
+    background: var(--tanned-brown);
+    color: var(--cream-white);
+    transform: translateY(-3px);
+}
+
+.hero-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--tanned-brown);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-visual {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-cards {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.card {
+    position: absolute;
+    width: 60px;
+    height: 84px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--cream-white);
+    box-shadow: var(--shadow-medium);
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.card-1 {
+    top: 20px;
+    left: 50px;
+    animation-delay: 0s;
+    color: var(--deep-red);
+}
+
+.card-2 {
+    top: 80px;
+    right: 30px;
+    animation-delay: 0.7s;
+    color: var(--deep-red);
+}
+
+.card-3 {
+    bottom: 80px;
+    left: 30px;
+    animation-delay: 1.4s;
+    color: var(--deep-red);
+}
+
+.card-4 {
+    bottom: 20px;
+    right: 50px;
+    animation-delay: 2.1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(2deg); }
+    50% { transform: translateY(-5px) rotate(-1deg); }
+    75% { transform: translateY(-15px) rotate(1deg); }
+}
+
+.slot-machine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--gradient-accent);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-heavy);
+    cursor: pointer;
+}
+
+.slot-reel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: spin 2s linear infinite;
+}
+
+.slot-reel span {
+    font-size: 2rem;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-60px); }
+}
+
+/* Games Section */
+.games-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--cream-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--tanned-brown);
+}
+
+.game-categories {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid var(--tanned-brown);
+    border-radius: var(--radius-lg);
+    color: var(--dark-brown);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--gradient-primary);
+    color: var(--cream-white);
+    border-color: var(--dark-brown);
+    transform: translateY(-2px);
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.game-card {
+    background: var(--primary-beige);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-medium);
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.game-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.game-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--cream-white);
+    position: relative;
+}
+
+.slots-bg {
+    background: linear-gradient(135deg, var(--accent-gold), #B8860B);
+}
+
+.table-bg {
+    background: linear-gradient(135deg, var(--tanned-brown), var(--dark-brown));
+}
+
+.live-bg {
+    background: linear-gradient(135deg, var(--deep-red), #A52A2A);
+}
+
+.jackpot-bg {
+    background: linear-gradient(135deg, #8B0000, #DC143C);
+}
+
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    opacity: 0;
+    transition: var(--transition-medium);
+}
+
+.game-card:hover .game-overlay {
+    opacity: 1;
+}
+
+.play-btn, .demo-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.play-btn {
+    background: var(--gradient-accent);
+    color: var(--dark-brown);
+}
+
+.demo-btn {
+    background: transparent;
+    color: var(--cream-white);
+    border: 2px solid var(--cream-white);
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
+.demo-btn:hover {
+    background: var(--cream-white);
+    color: var(--dark-brown);
+}
+
+.live-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--deep-red);
+    color: var(--cream-white);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-transform: uppercase;
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--cream-white);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.jackpot-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--gradient-accent);
+    color: var(--dark-brown);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.game-info {
+    padding: var(--spacing-md);
+}
+
+.game-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: var(--spacing-xs);
+}
+
+.game-provider {
+    color: var(--tanned-brown);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.game-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jackpot {
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.mega-jackpot {
+    font-size: 1.1rem;
+    animation: jackpotGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes jackpotGlow {
+    from { color: var(--accent-gold); }
+    to { color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+}
+
+.rtp, .players, .min-bet {
+    font-size: 0.85rem;
+    color: var(--tanned-brown);
+}
+
+/* Mobile-first responsive */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 1.8rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .game-categories {
+        justify-content: center;
+    }
+    
+    .category-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .floating-cards {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .card {
+        width: 50px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Touch-friendly hover effects for mobile */
+@media (hover: none) {
+    .game-card:active {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-heavy);
+    }
+    
+    .game-card:active .game-overlay {
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <div class="logo">
+                        <h1 class="brand-name">PUB<span class="club-symbol">♧</span>POKIES</h1>
+                        <p class="slogan">♠ slip ♡ slop ◇ SLAP! ♧</p>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <a href="#games" class="nav-link">Games</a>
+                    <a href="#promotions" class="nav-link">Promotions</a>
+                    <a href="#vip" class="nav-link">VIP Club</a>
+                    <a href="#support" class="nav-link">Support</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-secondary">Login</button>
+                    <button class="btn-primary">Join Now</button>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2 class="hero-title">Welcome to the Ultimate Gaming Experience</h2>
+                <p class="hero-subtitle">Where every spin tells a story, every hand holds promise, and every game brings you closer to fortune.</p>
+                <div class="hero-buttons">
+                    <button class="btn-hero-primary">Start Playing Now</button>
+                    <button class="btn-hero-secondary">Explore Games</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">$2.5M+</span>
+                        <span class="stat-label">Won Today</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Games</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card card-1" onclick="animateCard(this)">♠</div>
+                    <div class="card card-2" onclick="animateCard(this)">♡</div>
+                    <div class="card card-3" onclick="animateCard(this)">◇</div>
+                    <div class="card card-4" onclick="animateCard(this)">♧</div>
+                </div>
+                <div class="slot-machine" onclick="spinSlot()">
+                    <div class="slot-reel" id="slotReel">
+                        <span>🎰</span>
+                        <span>🍒</span>
+                        <span>💰</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Games</h2>
+                <p class="section-subtitle">Discover our premium collection of games</p>
+            </div>
+            
+            <div class="game-categories">
+                <button class="category-btn active" onclick="filterGames('all')">All Games</button>
+                <button class="category-btn" onclick="filterGames('slots')">Slots</button>
+                <button class="category-btn" onclick="filterGames('table')">Table Games</button>
+                <button class="category-btn" onclick="filterGames('live')">Live Casino</button>
+                <button class="category-btn" onclick="filterGames('jackpot')">Jackpots</button>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card" data-category="slots">
+                    <div class="game-image">
+                        <div class="game-placeholder slots-bg">
+                            <i class="fas fa-dice-d6"></i>
+                        </div>
+                        <div class="game-overlay">
+                            <button class="play-btn" onclick="playGame('Golden Pub Slots')">Play Now</button>
+                            <button class="demo-btn" onclick="demoGame('Golden Pub Slots')">Try Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Golden Pub Slots</h3>
+                        <p class="game-provider">Pub♧Pokies Exclusive</p>
+                        <div class="game-meta">
+                            <span class="jackpot" id="jackpot1">$125,400</span>
+                            <span class="rtp">RTP: 96.5%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="table">
+                    <div class="game-image">
+                        <div class="game-placeholder table-bg">
+                            <i class="fas fa-spade"></i>
+                        </div>
+                        <div class="game-overlay">
+                            <button class="play-btn" onclick="playGame('Premium Blackjack')">Play Now</button>
+                            <button class="demo-btn" onclick="demoGame('Premium Blackjack')">Try Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Premium Blackjack</h3>
+                        <p class="game-provider">Classic Table Game</p>
+                        <div class="game-meta">
+                            <span class="players">12 Playing</span>
+                            <span class="rtp">RTP: 99.1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="live">
+                    <div class="game-image">
+                        <div class="game-placeholder live-bg">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="game-overlay">
+                            <button class="play-btn" onclick="playGame('Live Roulette VIP')">Join Table</button>
+                            <button class="demo-btn" onclick="demoGame('Live Roulette VIP')">Watch Game</button>
+                        </div>
+                        <div class="live-indicator">
+                            <span class="live-dot"></span>
+                            LIVE
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Live Roulette VIP</h3>
+                        <p class="game-provider">Evolution Gaming</p>
+                        <div class="game-meta">
+                            <span class="players">8/12 Players</span>
+                            <span class="min-bet">Min: $5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="jackpot">
+                    <div class="game-image">
+                        <div class="game-placeholder jackpot-bg">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="game-overlay">
+                            <button class="play-btn" onclick="playGame('Mega Fortune Dreams')">Play Now</button>
+                            <button class="demo-btn" onclick="demoGame('Mega Fortune Dreams')">Try Demo</button>
+                        </div>
+                        <div class="jackpot-badge">
+                            MEGA JACKPOT
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Mega Fortune Dreams</h3>
+                        <p class="game-provider">NetEnt</p>
+                        <div class="game-meta">
+                            <span class="jackpot mega-jackpot" id="megaJackpot">$2,847,392</span>
+                            <span class="rtp">RTP: 95.9%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple JavaScript for Android compatibility
+        function animateCard(card) {
+            card.style.transform = 'translateY(-20px) rotate(10deg) scale(1.2)';
+            card.style.zIndex = '10';
+            setTimeout(() => {
+                card.style.transform = '';
+                card.style.zIndex = '';
+            }, 500);
+        }
+
+        function spinSlot() {
+            const reel = document.getElementById('slotReel');
+            reel.style.animationDuration = '0.1s';
+            setTimeout(() => {
+                reel.style.animationDuration = '2s';
+            }, 1000);
+        }
+
+        function filterGames(category) {
+            const buttons = document.querySelectorAll('.category-btn');
+            const cards = document.querySelectorAll('.game-card');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function playGame(gameName) {
+            alert('🎰 Launching ' + gameName + '! Get ready for an amazing gaming experience!');
+        }
+
+        function demoGame(gameName) {
+            alert('🎮 Demo Mode: ' + gameName + '\nTry the game risk-free with virtual credits!');
+        }
+
+        // Animate jackpots
+        setInterval(() => {
+            const jackpot1 = document.getElementById('jackpot1');
+            const megaJackpot = document.getElementById('megaJackpot');
+            
+            if (jackpot1) {
+                const current1 = parseInt(jackpot1.textContent.replace(/[^\d]/g, ''));
+                const new1 = current1 + Math.floor(Math.random() * 50) + 1;
+                jackpot1.textContent = '$' + new1.toLocaleString();
+            }
+            
+            if (megaJackpot) {
+                const currentMega = parseInt(megaJackpot.textContent.replace(/[^\d]/g, ''));
+                const newMega = currentMega + Math.floor(Math.random() * 100) + 1;
+                megaJackpot.textContent = '$' + newMega.toLocaleString();
+            }
+        }, 3000);
+
+        console.log('🎰 PUB♧POKIES Casino loaded! Welcome to your amazing casino! ♠ slip ♡ slop ◇ SLAP! ♧');
+    </script>
+</body>
+</html>
